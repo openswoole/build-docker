@@ -32,7 +32,7 @@ function replace_hook_string(string $string, $from, $to): string
 }
 
 $standard_template = file_get_contents(__DIR__ . '/templates/standard/Dockerfile');
-$standard_tags = ['7.2', '7.3', '7.4', '8.0', '8.1.0RC5', 'latest'];
+$standard_tags = ['7.2', '7.3', '7.4', '8.0', '8.1.0RC6', 'latest'];
 foreach ($standard_tags as $tag) {
     $content = replace_hook_string($standard_template, 'tag', $tag);
     @mkdir(__DIR__ . '/' . $tag);

@@ -1,4 +1,4 @@
-FROM php:8.1.0RC5
+FROM php:8.1.0RC6
 
 MAINTAINER Open Swoole Group <hello@swoole.co.uk>
 
