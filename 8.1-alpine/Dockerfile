@@ -1,22 +1,12 @@
-FROM php:8.1
+FROM php:8.1-alpine
 
 MAINTAINER Open Swoole Group <hello@swoole.co.uk>
 
-RUN apt update -y
+RUN apk update
 
-RUN apt install -y \
-    procps \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev \
-    openssl \
-    libssh-dev \
-    libpcre3 \
-    libpcre3-dev \
-    libonig-dev \
-    libcurl4-openssl-dev \
-    libc-ares-dev \
-    libpq-dev \
+# common tools
+RUN apk add --no-cache \
+    bash \
     curl \
     wget \
     zip \
@@ -24,8 +14,35 @@ RUN apt install -y \
     git \
     vim
 
+# dev tools
+RUN apk add --no-cache \
+    autoconf \
+    automake \
+    c-ares \
+    c-ares-dev \
+    dpkg \
+    dpkg-dev \
+    file \
+    g++ \
+    gcc \
+    libgcc \
+    libstdc++ \
+    libtool \
+    make \
+    openssl \
+    openssl-dev \
+    pcre-dev \
+    pkgconf \
+    re2c \
+    zlib \
+    zlib-dev \
+    libcurl \
+    libpq-dev \
+    curl-dev
+
+
+# extensions
 RUN docker-php-ext-install \
-    gd \
     pdo_mysql \
     mysqli \
     opcache \
@@ -40,11 +57,8 @@ RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
     composer self-update --clean-backups
 
-# dev-tools
-RUN apt install -y \
+# dev tools
+RUN apk add --no-cache \
     gdb \
     strace \
     valgrind
-
-# clean up
-RUN apt autoremove && apt clean
