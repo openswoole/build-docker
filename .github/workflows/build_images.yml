@@ -1,6 +1,6 @@
 name: Build Latest Images
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build_latest_images:
