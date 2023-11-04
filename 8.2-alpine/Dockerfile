@@ -1,6 +1,6 @@
 FROM php:8.2-alpine
 
-MAINTAINER Open Swoole Group <hello@swoole.co.uk>
+MAINTAINER Open Swoole Group <hello@openswoole.com>
 
 RUN apk update
 
