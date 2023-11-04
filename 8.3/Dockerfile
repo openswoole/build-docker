@@ -1,4 +1,4 @@
-FROM php:8.2
+FROM php:8.3.0RC5-cli
 
 MAINTAINER Open Swoole Group <hello@swoole.co.uk>
 
