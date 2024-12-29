@@ -1,6 +1,6 @@
-FROM php:8.3.0RC5-cli
+FROM php:8.3
 
-MAINTAINER Open Swoole Group <hello@swoole.co.uk>
+MAINTAINER Open Swoole Group <hello@openswoole.com>
 
 RUN apt update -y
 

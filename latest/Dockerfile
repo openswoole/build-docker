@@ -1,6 +1,6 @@
 FROM php:latest
 
-MAINTAINER Open Swoole Group <hello@swoole.co.uk>
+MAINTAINER Open Swoole Group <hello@openswoole.com>
 
 RUN apt update -y
 
