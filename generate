@@ -32,7 +32,7 @@ function replace_hook_string(string $string, $from, $to): string
 }
 
 $standard_template = file_get_contents(__DIR__ . '/templates/standard/Dockerfile');
-$standard_tags = ['7.2', '7.3', '7.4', '8.0', '8.1', '8.2', '8.3', 'latest'];
+$standard_tags = ['8.2', '8.3', '8.4', 'latest'];
 foreach ($standard_tags as $tag) {
     $content = replace_hook_string($standard_template, 'tag', $tag);
     @mkdir(__DIR__ . '/' . $tag);
@@ -41,7 +41,7 @@ foreach ($standard_tags as $tag) {
 
 // generate alpine
 $alpine_template = file_get_contents(__DIR__ . '/templates/alpine/Dockerfile');
-$alpine_tags = ['7.2-alpine', '7.3-alpine', '7.4-alpine', '8.0-alpine', '8.1-alpine', '8.2-alpine', '8.3-alpine', 'latest-alpine'];
+$alpine_tags = ['8.2-alpine', '8.3-alpine', '8.4-alpine', 'latest-alpine'];
 foreach ($alpine_tags as $tag) {
     $content = replace_hook_string($alpine_template, 'tag', $tag);
     @mkdir(__DIR__ . '/' . $tag);
