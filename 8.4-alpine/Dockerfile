@@ -28,6 +28,7 @@ RUN apk add --no-cache \
     libgcc \
     libstdc++ \
     libtool \
+    linux-headers \
     make \
     openssl \
     openssl-dev \

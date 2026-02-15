@@ -17,6 +17,7 @@ RUN apt install -y \
     libcurl4-openssl-dev \
     libc-ares-dev \
     libpq-dev \
+    linux-libc-dev \
     curl \
     wget \
     zip \
@@ -29,7 +30,7 @@ RUN docker-php-ext-install \
     pdo_mysql \
     mysqli \
     #opcache \
-    #sockets \
+    sockets \
     pcntl && \
     echo "opcache.enable_cli=1" >> /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini && \
     pecl install redis && docker-php-ext-enable redis

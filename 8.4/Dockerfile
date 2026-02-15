@@ -17,6 +17,7 @@ RUN apt install -y \
     libcurl4-openssl-dev \
     libc-ares-dev \
     libpq-dev \
+    linux-libc-dev \
     curl \
     wget \
     zip \
