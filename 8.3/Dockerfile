@@ -11,8 +11,6 @@ RUN apt install -y \
     libpng-dev \
     openssl \
     libssh-dev \
-    libpcre3 \
-    libpcre3-dev \
     libonig-dev \
     libcurl4-openssl-dev \
     libc-ares-dev \
